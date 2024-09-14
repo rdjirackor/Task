@@ -58,20 +58,31 @@ public class Robot {
     }
 
     private boolean canMove(double x, double y, Image mazeImage) {
-        int xCoord = (int) x;
-        int yCoord = (int) y;
+        double robotWidth = robotView.getImage().getWidth();
+        double robotHeight = robotView.getImage().getHeight();
 
-        if (xCoord < 0 || yCoord < 0 || xCoord >= mazeImage.getWidth() || yCoord >= mazeImage.getHeight()) {
+        double xLeft = x;  // Left boundary of robot
+        double xRight = x + robotWidth/1.5;  // While this is just the Right boundary of robot
+        double yTop = y;  // Top boundary of robot
+        double yBottom = y + robotHeight/1.5;  // This is just the bottom boundary of robot
+
+        if (xLeft < 0 || yTop < 0 || xRight >= mazeImage.getWidth() || yBottom >= mazeImage.getHeight()) {
             return false;
         }
 
-        Color pixelColor = mazeImage.getPixelReader().getColor(xCoord, yCoord);
-        return !isWall(pixelColor);
+        // This is to Check if any corner of the robot hits the wall
+        Color topLeft = mazeImage.getPixelReader().getColor((int) xLeft, (int) yTop);
+        Color topRight = mazeImage.getPixelReader().getColor((int) xRight, (int) yTop);
+        Color bottomLeft = mazeImage.getPixelReader().getColor((int) xLeft, (int) yBottom);
+        Color bottomRight = mazeImage.getPixelReader().getColor((int) xRight, (int) yBottom);
+
+        return !isWall(topLeft) && !isWall(topRight) && !isWall(bottomLeft) && !isWall(bottomRight);
     }
 
+
     private boolean isWall(Color pixelColor) {
-        return pixelColor.equals(Color.BLACK);
-    }
+        Color wallColor = Color.web("#005399");
+        return pixelColor.equals(wallColor);    }
 
     public void startAutoMovement() {
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(100), event -> {
