@@ -18,10 +18,15 @@ import javafx.util.Duration;
 
 import java.util.ArrayList;
 
+
 public class Main extends Application {
+
+
+
 
     @Override
     public void start(Stage primaryStage) {
+
         Image mazeImage = new Image(getClass().getResource("/maze.png").toExternalForm());
         ImageView mazeView = new ImageView(mazeImage);
 
@@ -555,7 +560,7 @@ public class Main extends Application {
         Timeline timeline = new Timeline();
 
 
-        Button startButton = new Button("Start Maze 1 (Animation");
+        Button startButton = new Button(" (Animation");
 
         Button startmanualButton = new Button("Start Maze 1 (Manual)");
 
@@ -570,9 +575,6 @@ public class Main extends Application {
         Button startButtonCar2 = new Button("Car 2 (Auto)");
 
         Button startmanualButtonCar2 = new Button("Car 2 (Manual)");
-
-        Pane maze1Layout = new Pane();
-        Pane maze2Layout = new Pane();
 
 
 
@@ -780,10 +782,6 @@ public class Main extends Application {
 
         TabPane tabPane = new TabPane();
 
-//        Tab welcomeTab = new Tab("Welcome");
-//        Tab welcomeTab2 = new Tab("Welcome");
-//        welcomeTab.setContent(welcomeLayout);
-//        welcomeTab2.setContent(welcomeLayout2);
 
         Tab maze1Tab = new Tab("Maze 1");
         maze1Tab.setContent(welcomeLayout);
@@ -795,7 +793,6 @@ public class Main extends Application {
 
         // Sets up the scene
         Scene scene = new Scene(tabPane, 800, 600);
-
 
 
         welcomeLayout.setAlignment(Pos.CENTER);
@@ -810,20 +807,10 @@ public class Main extends Application {
         welcomeLayout2.getChildren().add(startmanualButtonCar2);
 
 
-        Scene welcomeScene = new Scene(welcomeLayout, 300, 200);
-        Scene welcomeScene2 = new Scene(welcomeLayout2, 300, 200);
 
         primaryStage.setTitle("Maze Game");
         primaryStage.setScene(scene);
         primaryStage.show();
-
-
-     //   mazeScene.setOnKeyPressed(event -> robot.handleMovement(event, mazeImage));
-
-//        primaryStage.setTitle("Maze Game");
-//        primaryStage.setScene(mazeScene);
-//        primaryStage.show();
-
 
 
         timeline.play();
@@ -832,10 +819,6 @@ public class Main extends Application {
 
     }
 
-//    private boolean isWall(Color pixelColor) {
-//        Color wallColor = Color.web("#005399"); // This Blue wall color, is just a little thing to help in mapping walls so bot knows to avoid them
-//        return pixelColor.equals(wallColor);
-//    }
 
     public static void main(String[] args) {
         launch(args);

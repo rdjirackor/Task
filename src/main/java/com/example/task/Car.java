@@ -6,41 +6,31 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 
+
 public class Car {
+
+
+
     private final ImageView carView;
-    private final ImageView carUpView;
-    private final ImageView carDownView;
+
     private final int stepSize = 5; // Number of pixels to move per step
     private double xPosition = 50;
     private double yPosition = 50;
 
 
 
+
     public Car() {
         Image carImage = new Image(getClass().getResource("/car.png").toExternalForm());
-        Image carUpImage = new Image(getClass().getResource("/car_up.png").toExternalForm());
-        Image carDownImage = new Image(getClass().getResource("/car_down.png").toExternalForm());
         carView = new ImageView(carImage);
-        carUpView = new ImageView(carUpImage);
-        carDownView = new ImageView(carDownImage);
         carView.setX(xPosition);
         carView.setY(yPosition);
-
- carUpView.setX(xPosition);
-        carUpView.setY(yPosition);
-
- carDownView.setX(xPosition);
-        carDownView.setY(yPosition);
 
     }
 
 
     public ImageView getcarImageView() {
         return carView;
-    } public ImageView getcarUpImageView() {
-        return carUpView;
-    } public ImageView getcarDownImageView() {
-        return carDownView;
     }
 
     public void handleMovement(KeyEvent event, Image mazeImage) {

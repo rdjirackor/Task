@@ -6,6 +6,7 @@ module com.example.task {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
+    requires java.desktop;
 
     opens com.example.task to javafx.fxml;
     exports com.example.task;
