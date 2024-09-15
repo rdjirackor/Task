@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
@@ -560,21 +561,21 @@ public class Main extends Application {
         Timeline timeline = new Timeline();
 
 
-        Button startButton = new Button(" (Animation");
+        Button startButton = new Button("Robot Animation");
 
-        Button startmanualButton = new Button("Start Maze 1 (Manual)");
+        Button startmanualButton = new Button("Robot (Manual)");
 
-        Button startButtonCar = new Button("Car (Auto)");
+        Button startButtonCar = new Button("Car Animation");
 
         Button startmanualButtonCar = new Button("Car (Manual)");
 
-   Button startButton2 = new Button("Start Maze 2 (Animation");
+   Button startButton2 = new Button("Robot Animation");
 
-        Button startmanualButton2 = new Button("Start Maze 2 (Manual)");
+        Button startmanualButton2 = new Button("Robot (Manual)");
 
-        Button startButtonCar2 = new Button("Car 2 (Auto)");
+        Button startButtonCar2 = new Button("Car Animation");
 
-        Button startmanualButtonCar2 = new Button("Car 2 (Manual)");
+        Button startmanualButtonCar2 = new Button("Car (Manual)");
 
 
 
@@ -644,7 +645,6 @@ public class Main extends Application {
                         // Moving down
                         car.getcarImageView().setRotate(90);
 
-                        System.out.println("Down Now");
 
                     } else if (nextPosition[1] < currentPosition[1]) {
                         // Moving up
@@ -762,6 +762,10 @@ public class Main extends Application {
         });
         GridPane welcomeLayout = new GridPane();
 
+        Label label = new Label("Select One Of The Following Actions");
+        Label label2 = new Label("Select One Of The Following Actions");
+
+
         GridPane welcomeLayout2 = new GridPane();
 
         welcomeLayout.setVgap(10);
@@ -770,15 +774,7 @@ public class Main extends Application {
         welcomeLayout2.setVgap(10);
         welcomeLayout2.setHgap(10);
 
-        GridPane.setConstraints(startButton,0,0);
-        GridPane.setConstraints(startmanualButton,1,0);
-        GridPane.setConstraints(startButtonCar,0,1);
-        GridPane.setConstraints(startmanualButtonCar,1,1);
 
-        GridPane.setConstraints(startButton2,0,0);
-        GridPane.setConstraints(startmanualButton2,1,0);
-        GridPane.setConstraints(startButtonCar2,0,1);
-        GridPane.setConstraints(startmanualButtonCar2,1,1);
 
         TabPane tabPane = new TabPane();
 
@@ -796,16 +792,21 @@ public class Main extends Application {
 
 
         welcomeLayout.setAlignment(Pos.CENTER);
-        welcomeLayout.getChildren().add(startButton);
-        welcomeLayout.getChildren().add(startmanualButton);
-        welcomeLayout.getChildren().add(startButtonCar);
-        welcomeLayout.getChildren().add(startmanualButtonCar);
- welcomeLayout2.setAlignment(Pos.CENTER);
-        welcomeLayout2.getChildren().add(startButton2);
-        welcomeLayout2.getChildren().add(startmanualButton2);
-        welcomeLayout2.getChildren().add(startButtonCar2);
-        welcomeLayout2.getChildren().add(startmanualButtonCar2);
+        welcomeLayout.add(label, 0, 0, 2, 1);
 
+        // Add buttons to GridPane
+        welcomeLayout.add(startButton, 0, 2);
+        welcomeLayout.add(startmanualButton, 1, 2);
+        welcomeLayout.add(startButtonCar, 0, 3);
+        welcomeLayout.add(startmanualButtonCar, 1, 3);
+ welcomeLayout2.setAlignment(Pos.CENTER);
+        welcomeLayout2.add(label2, 0, 0, 2, 1);
+
+        // Add buttons to GridPane
+        welcomeLayout2.add(startButton2, 0, 2);
+        welcomeLayout2.add(startmanualButton2, 1, 2);
+        welcomeLayout2.add(startButtonCar2, 0, 3);
+        welcomeLayout2.add(startmanualButtonCar2, 1, 3);
 
 
         primaryStage.setTitle("Maze Game");

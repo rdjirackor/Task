@@ -9,7 +9,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class CarDrawing {
-    static public void main(String args[]) throws Exception {
+    static public void main(String args[]) {
         try {
             int width = 25, height = 25;
 
@@ -20,7 +20,7 @@ public class CarDrawing {
             Graphics2D ig2 = bi.createGraphics();
 
 
-            // Draw car body
+            // Draw car body thingy
             ig2.setColor(Color.blue);
             ig2.fillRect(5, 10, 15, 5); // Main body of the car
 

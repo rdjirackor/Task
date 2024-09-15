@@ -54,7 +54,6 @@ public class Robot {
         robotView.setX(xPosition);
         robotView.setY(yPosition);
 
-        System.out.println(xPosition + ", " + yPosition);
     }
 
 
