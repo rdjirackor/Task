@@ -735,7 +735,6 @@ public class Main extends Application {
                         // Moving down
                         car.getcarImageView().setRotate(90);
 
-                        System.out.println("Down Now");
 
                     } else if (nextPosition[1] < currentPosition[1]) {
                         // Moving up

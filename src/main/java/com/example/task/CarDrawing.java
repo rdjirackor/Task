@@ -28,8 +28,8 @@ public class CarDrawing {
             ig2.fillRect(8, 6, 9, 4); // Car roof
 
             ig2.setColor(Color.black);
-            ig2.fillOval(7, 15, 5, 5); // Left wheel
-            ig2.fillOval(13, 15, 5, 5); // Right wheel
+            ig2.fillOval(7, 15, 5, 4); // Left wheel
+            ig2.fillOval(13, 15, 5, 4); // Right wheel
 
             ImageIO.write(bi, "PNG", new File("src/resources/car.png"));
 
