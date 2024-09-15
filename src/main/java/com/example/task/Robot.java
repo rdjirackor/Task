@@ -58,6 +58,8 @@ public class Robot {
         }
         robotView.setX(xPosition);
         robotView.setY(yPosition);
+
+        System.out.println(xPosition + ", " + yPosition);
     }
 
 
@@ -86,6 +88,8 @@ public class Robot {
 
     private boolean isWall(Color pixelColor) {
         Color wallColor = Color.web("#005399");
+        Color wallColor2 = Color.web();
+        Color wallColor3 = Color.web ()
         return pixelColor.equals(wallColor);
     }
 

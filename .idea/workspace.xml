@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96f91142-1833-4120-9fd9-7cba2e4a1f76" name="Changes" comment="Added a welcome page">
+    <list default="true" id="96f91142-1833-4120-9fd9-7cba2e4a1f76" name="Changes" comment="Added a directions for car motion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/task/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/task/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/car.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/car.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/task/Robot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,14 +112,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726379099244</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added a directions for car motion">
+      <option name="closed" value="true" />
+      <created>1726382930415</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726382930415</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Loaded Robot And Maze Image. &#10;Also added a key Event" />
     <MESSAGE value="Added boundary logic" />
     <MESSAGE value="Added a welcome page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a welcome page" />
+    <MESSAGE value="Added a directions for car motion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a directions for car motion" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Task$Main.ic" NAME="Main Coverage Results" MODIFIED="1726298798499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

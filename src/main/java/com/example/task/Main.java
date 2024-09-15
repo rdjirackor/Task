@@ -6,6 +6,8 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -22,6 +24,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         Image mazeImage = new Image(getClass().getResource("/maze.png").toExternalForm());
         ImageView mazeView = new ImageView(mazeImage);
+
+        Image mazeImage2 = new Image(getClass().getResource("/maze2.png").toExternalForm());
+        ImageView mazeView2 = new ImageView(mazeImage2);
 
 //        int[][] grid = new int[width][height];
 //        for (int y = 0; y < height; y++) {
@@ -324,15 +329,18 @@ public class Main extends Application {
 
         Button startmanualButtonCar = new Button("Car (Manual)");
 
+        Pane maze1Layout = new Pane();  // Replace with your first maze layout
+        Pane maze2Layout = new Pane();
+
 
 
 
         startmanualButton.setOnAction(e->{
             Pane mazeLayout = new Pane();
-            mazeLayout.getChildren().addAll(mazeView, robot.getRobotImageView());
+            mazeLayout.getChildren().addAll(mazeView2, robot.getRobotImageView());
 
-            Scene mazeScene = new Scene(mazeLayout, mazeImage.getWidth(), mazeImage.getHeight());
-            mazeScene.setOnKeyPressed(event -> robot.handleMovement(event, mazeImage));
+            Scene mazeScene = new Scene(mazeLayout, mazeImage2.getWidth(), mazeImage2.getHeight());
+            mazeScene.setOnKeyPressed(event -> robot.handleMovement(event, mazeImage2));
             timeline.play(); // Start the timeline when switching to the maze scene
             primaryStage.setScene(mazeScene); // Switch to the maze scene
 
@@ -369,21 +377,44 @@ public class Main extends Application {
 
             int delay = 0;
 
-            for (double[] position : positions) {
+            for (int i = 0; i < positions.size(); i++) {
+                final int index = i;
                 KeyFrame keyFrame = new KeyFrame(Duration.millis(delay), event -> {
-                    car.getcarImageView().setX(position[0]);
-                    car.getcarImageView().setY(position[1]);
+                    // Get the current and next position
+                    double[] currentPosition = positions.get(index);
+                    double[] nextPosition = (index + 1 < positions.size()) ? positions.get(index + 1) : currentPosition;
+
+                    // Update the car's position
+                    car.getcarImageView().setX(currentPosition[0]);
+                    car.getcarImageView().setY(currentPosition[1]);
+
+                    // Determine the direction based on movement
+                    if (nextPosition[0] > currentPosition[0]) {
+                        // Moving right
+                        car.getcarImageView().setRotate(0);
+                    } else if (nextPosition[0] < currentPosition[0]) {
+                        // Moving left
+                        car.getcarImageView().setRotate(0);
+
+                    } else if (nextPosition[1] > currentPosition[1]) {
+                        // Moving down
+                        car.getcarImageView().setRotate(90);
+
+                        System.out.println("Down Now");
+
+                    } else if (nextPosition[1] < currentPosition[1]) {
+                        // Moving up
+                        car.getcarImageView().setRotate(270);
+                    }
                 });
                 timeline.getKeyFrames().add(keyFrame);
-                delay += 500; //Also added a    Delay of 500 milliseconds between moves
+                delay += 500; // Added a delay of 500 milliseconds between moves
             }
-            mazeScene.setOnKeyPressed(event -> car.handleMovement(event, mazeImage));
+
             timeline.play(); // Start the timeline when switching to the maze scene
             primaryStage.setScene(mazeScene); // Switch to the maze scene
-
-
-
         });
+
         startmanualButtonCar.setOnAction(e -> {
             Pane mazeLayout = new Pane();
             mazeLayout.getChildren().addAll(mazeView, car.getcarImageView());
@@ -395,25 +426,54 @@ public class Main extends Application {
 
         });
         GridPane welcomeLayout = new GridPane();
+        GridPane welcomeLayout2 = new GridPane();
         welcomeLayout.setVgap(10);
         welcomeLayout.setHgap(10);
+        welcomeLayout2.setVgap(10);
+        welcomeLayout2.setHgap(10);
 
         GridPane.setConstraints(startButton,0,0);
         GridPane.setConstraints(startmanualButton,1,0);
         GridPane.setConstraints(startButtonCar,0,1);
         GridPane.setConstraints(startmanualButtonCar,1,1);
+        TabPane tabPane = new TabPane();
 
-welcomeLayout.setAlignment(Pos.CENTER);
+//        Tab welcomeTab = new Tab("Welcome");
+//        Tab welcomeTab2 = new Tab("Welcome");
+//        welcomeTab.setContent(welcomeLayout);
+//        welcomeTab2.setContent(welcomeLayout2);
+
+        Tab maze1Tab = new Tab("Maze 1");
+        maze1Tab.setContent(welcomeLayout);
+
+        Tab maze2Tab = new Tab("Maze 2");
+        maze2Tab.setContent(welcomeLayout2);
+
+        tabPane.getTabs().addAll( maze1Tab, maze2Tab);
+
+        // Set up the scene
+        Scene scene = new Scene(tabPane, 800, 600);  // Adjust size as needed
+
+
+
+
+        welcomeLayout.setAlignment(Pos.CENTER);
         welcomeLayout.getChildren().add(startButton);
         welcomeLayout.getChildren().add(startmanualButton);
         welcomeLayout.getChildren().add(startButtonCar);
         welcomeLayout.getChildren().add(startmanualButtonCar);
+ welcomeLayout2.setAlignment(Pos.CENTER);
+        welcomeLayout2.getChildren().add(startButton);
+        welcomeLayout2.getChildren().add(startmanualButton);
+        welcomeLayout2.getChildren().add(startButtonCar);
+        welcomeLayout2.getChildren().add(startmanualButtonCar);
 
 
         Scene welcomeScene = new Scene(welcomeLayout, 300, 200);
+        Scene welcomeScene2 = new Scene(welcomeLayout2, 300, 200);
 
         primaryStage.setTitle("Maze Game");
-        primaryStage.setScene(welcomeScene);
+        primaryStage.setScene(scene);
         primaryStage.show();
 
 
