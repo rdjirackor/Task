@@ -1,18 +1,13 @@
 package com.example.task;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
-import javafx.util.Duration;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Robot {
-    private ImageView robotView;
+    private final ImageView robotView;
     private final int stepSize = 5; // Number of pixels to move per step
     private double xPosition = 50;
     private double yPosition = 50;
@@ -63,7 +58,6 @@ public class Robot {
     }
 
 
-
     private boolean canMove(double x, double y, Image mazeImage) {
         double robotWidth = robotView.getImage().getWidth();
         double robotHeight = robotView.getImage().getHeight();
@@ -86,11 +80,13 @@ public class Robot {
         return !isWall(topLeft) && !isWall(topRight) && !isWall(bottomLeft) && !isWall(bottomRight);
     }
 
+
     private boolean isWall(Color pixelColor) {
         Color wallColor = Color.web("#005399");
-        Color wallColor2 = Color.web();
-        Color wallColor3 = Color.web ()
-        return pixelColor.equals(wallColor);
+        Color wallColor2 = Color.web("#003fffff");
+        Color wallColor3 = Color.web ("#cc7700ff");
+        Color wallColor4 = Color.web ("#6600ccff");
+        return pixelColor.equals(wallColor)||pixelColor.equals(wallColor2)||pixelColor.equals(wallColor3)||pixelColor.equals(wallColor4);
     }
 
 

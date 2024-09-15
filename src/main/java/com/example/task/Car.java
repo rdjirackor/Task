@@ -1,20 +1,15 @@
 package com.example.task;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
+
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
-import javafx.util.Duration;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Car {
-    private ImageView carView;
-    private ImageView carUpView;
-    private ImageView carDownView;
+    private final ImageView carView;
+    private final ImageView carUpView;
+    private final ImageView carDownView;
     private final int stepSize = 5; // Number of pixels to move per step
     private double xPosition = 50;
     private double yPosition = 50;

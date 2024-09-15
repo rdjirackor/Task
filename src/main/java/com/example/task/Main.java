@@ -43,6 +43,8 @@ public class Main extends Application {
         Robot robot = new Robot();
         Car car = new Car();
         ArrayList<double[]> positions = new ArrayList<>();
+
+        ArrayList<double[]> positions2 = new ArrayList<>();
         //These are all the positions the bot needs to reach before completing that maze thing
         positions.add(new double[]{50.0, 55.0});
         positions.add(new double[]{50.0, 60.0});
@@ -307,6 +309,240 @@ public class Main extends Application {
 
 
 
+        positions2.add(new double[]{50.0, 55.0});
+        positions2.add(new double[]{50.0, 60.0});
+        positions2.add(new double[]{50.0, 65.0});
+        positions2.add(new double[]{50.0, 70.0});
+        positions2.add(new double[]{50.0, 75.0});
+        positions2.add(new double[]{50.0, 80.0});
+        positions2.add(new double[]{50.0, 85.0});
+        positions2.add(new double[]{50.0, 90.0});
+        positions2.add(new double[]{50.0, 95.0});
+        positions2.add(new double[]{50.0, 100.0});
+        positions2.add(new double[]{50.0, 105.0});
+        positions2.add(new double[]{50.0, 110.0});
+        positions2.add(new double[]{50.0, 115.0});
+        positions2.add(new double[]{50.0, 120.0});
+        positions2.add(new double[]{50.0, 125.0});
+        positions2.add(new double[]{50.0, 130.0});
+        positions2.add(new double[]{50.0, 135.0});
+        positions2.add(new double[]{50.0, 140.0});
+        positions2.add(new double[]{50.0, 145.0});
+        positions2.add(new double[]{50.0, 150.0});
+        positions2.add(new double[]{50.0, 155.0});
+        positions2.add(new double[]{50.0, 160.0});
+        positions2.add(new double[]{50.0, 165.0});
+        positions2.add(new double[]{50.0, 170.0});
+        positions2.add(new double[]{50.0, 175.0});
+        positions2.add(new double[]{50.0, 180.0});
+        positions2.add(new double[]{50.0, 185.0});
+        positions2.add(new double[]{50.0, 190.0});
+        positions2.add(new double[]{50.0, 195.0});
+        positions2.add(new double[]{50.0, 200.0});
+        positions2.add(new double[]{50.0, 205.0});
+        positions2.add(new double[]{50.0, 210.0});
+        positions2.add(new double[]{50.0, 215.0});
+        positions2.add(new double[]{50.0, 220.0});
+        positions2.add(new double[]{50.0, 225.0});
+        positions2.add(new double[]{50.0, 230.0});
+        positions2.add(new double[]{50.0, 235.0});
+        positions2.add(new double[]{50.0, 240.0});
+        positions2.add(new double[]{50.0, 245.0});
+        positions2.add(new double[]{50.0, 250.0});
+        positions2.add(new double[]{50.0, 255.0});
+        positions2.add(new double[]{50.0, 260.0});
+        positions2.add(new double[]{50.0, 265.0});
+        positions2.add(new double[]{50.0, 270.0});
+        positions2.add(new double[]{50.0, 275.0});
+        positions2.add(new double[]{50.0, 280.0});
+        positions2.add(new double[]{50.0, 285.0});
+        positions2.add(new double[]{50.0, 290.0});
+        positions2.add(new double[]{55.0, 290.0});
+        positions2.add(new double[]{60.0, 290.0});
+        positions2.add(new double[]{65.0, 290.0});
+        positions2.add(new double[]{70.0, 290.0});
+        positions2.add(new double[]{75.0, 290.0});
+        positions2.add(new double[]{80.0, 290.0});
+        positions2.add(new double[]{85.0, 290.0});
+        positions2.add(new double[]{90.0, 290.0});
+        positions2.add(new double[]{95.0, 290.0});
+        positions2.add(new double[]{100.0, 290.0});
+        positions2.add(new double[]{105.0, 290.0});
+        positions2.add(new double[]{110.0, 290.0});
+        positions2.add(new double[]{115.0, 290.0});
+        positions2.add(new double[]{120.0, 290.0});
+        positions2.add(new double[]{125.0, 290.0});
+        positions2.add(new double[]{130.0, 290.0});
+        positions2.add(new double[]{135.0, 290.0});
+        positions2.add(new double[]{140.0, 290.0});
+        positions2.add(new double[]{145.0, 290.0});
+        positions2.add(new double[]{150.0, 290.0});
+        positions2.add(new double[]{155.0, 290.0});
+        positions2.add(new double[]{160.0, 290.0});
+        positions2.add(new double[]{165.0, 290.0});
+        positions2.add(new double[]{170.0, 290.0});
+        positions2.add(new double[]{175.0, 290.0});
+        positions2.add(new double[]{180.0, 290.0});
+        positions2.add(new double[]{185.0, 290.0});
+        positions2.add(new double[]{190.0, 290.0});
+        positions2.add(new double[]{190.0, 285.0});
+        positions2.add(new double[]{190.0, 280.0});
+        positions2.add(new double[]{190.0, 275.0});
+        positions2.add(new double[]{190.0, 270.0});
+        positions2.add(new double[]{190.0, 265.0});
+        positions2.add(new double[]{190.0, 260.0});
+        positions2.add(new double[]{190.0, 255.0});
+        positions2.add(new double[]{190.0, 250.0});
+        positions2.add(new double[]{190.0, 245.0});
+        positions2.add(new double[]{190.0, 240.0});
+        positions2.add(new double[]{190.0, 235.0});
+        positions2.add(new double[]{190.0, 230.0});
+        positions2.add(new double[]{190.0, 225.0});
+        positions2.add(new double[]{190.0, 220.0});
+        positions2.add(new double[]{190.0, 215.0});
+        positions2.add(new double[]{190.0, 210.0});
+        positions2.add(new double[]{190.0, 205.0});
+        positions2.add(new double[]{190.0, 200.0});
+        positions2.add(new double[]{190.0, 195.0});
+        positions2.add(new double[]{190.0, 190.0});
+        positions2.add(new double[]{190.0, 185.0});
+        positions2.add(new double[]{190.0, 180.0});
+        positions2.add(new double[]{190.0, 175.0});
+        positions2.add(new double[]{190.0, 170.0});
+        positions2.add(new double[]{195.0, 170.0});
+        positions2.add(new double[]{200.0, 170.0});
+        positions2.add(new double[]{205.0, 170.0});
+        positions2.add(new double[]{210.0, 170.0});
+        positions2.add(new double[]{215.0, 170.0});
+        positions2.add(new double[]{220.0, 170.0});
+        positions2.add(new double[]{225.0, 170.0});
+        positions2.add(new double[]{230.0, 170.0});
+        positions2.add(new double[]{235.0, 170.0});
+        positions2.add(new double[]{240.0, 170.0});
+        positions2.add(new double[]{245.0, 170.0});
+        positions2.add(new double[]{250.0, 170.0});
+        positions2.add(new double[]{255.0, 170.0});
+        positions2.add(new double[]{260.0, 170.0});
+        positions2.add(new double[]{265.0, 170.0});
+        positions2.add(new double[]{270.0, 170.0});
+        positions2.add(new double[]{275.0, 170.0});
+        positions2.add(new double[]{280.0, 170.0});
+        positions2.add(new double[]{285.0, 170.0});
+        positions2.add(new double[]{290.0, 170.0});
+        positions2.add(new double[]{295.0, 170.0});
+        positions2.add(new double[]{300.0, 170.0});
+        positions2.add(new double[]{305.0, 170.0});
+        positions2.add(new double[]{305.0, 165.0});
+        positions2.add(new double[]{305.0, 160.0});
+        positions2.add(new double[]{305.0, 155.0});
+        positions2.add(new double[]{305.0, 150.0});
+        positions2.add(new double[]{305.0, 145.0});
+        positions2.add(new double[]{305.0, 140.0});
+        positions2.add(new double[]{305.0, 135.0});
+        positions2.add(new double[]{305.0, 130.0});
+        positions2.add(new double[]{305.0, 125.0});
+        positions2.add(new double[]{305.0, 120.0});
+        positions2.add(new double[]{305.0, 115.0});
+        positions2.add(new double[]{305.0, 110.0});
+        positions2.add(new double[]{305.0, 105.0});
+        positions2.add(new double[]{305.0, 100.0});
+        positions2.add(new double[]{305.0, 95.0});
+        positions2.add(new double[]{305.0, 90.0});
+        positions2.add(new double[]{305.0, 85.0});
+        positions2.add(new double[]{305.0, 80.0});
+        positions2.add(new double[]{305.0, 75.0});
+        positions2.add(new double[]{305.0, 70.0});
+        positions2.add(new double[]{305.0, 65.0});
+        positions2.add(new double[]{305.0, 60.0});
+        positions2.add(new double[]{305.0, 55.0});
+        positions2.add(new double[]{305.0, 50.0});
+        positions2.add(new double[]{305.0, 45.0});
+        positions2.add(new double[]{305.0, 40.0});
+        positions2.add(new double[]{305.0, 35.0});
+        positions2.add(new double[]{305.0, 30.0});
+        positions2.add(new double[]{305.0, 25.0});
+        positions2.add(new double[]{310.0, 25.0});
+        positions2.add(new double[]{315.0, 25.0});
+        positions2.add(new double[]{320.0, 25.0});
+        positions2.add(new double[]{325.0, 25.0});
+        positions2.add(new double[]{330.0, 25.0});
+        positions2.add(new double[]{335.0, 25.0});
+        positions2.add(new double[]{340.0, 25.0});
+        positions2.add(new double[]{345.0, 25.0});
+        positions2.add(new double[]{350.0, 25.0});
+        positions2.add(new double[]{355.0, 25.0});
+        positions2.add(new double[]{360.0, 25.0});
+        positions2.add(new double[]{365.0, 25.0});
+        positions2.add(new double[]{370.0, 25.0});
+        positions2.add(new double[]{375.0, 25.0});
+        positions2.add(new double[]{380.0, 25.0});
+        positions2.add(new double[]{385.0, 25.0});
+        positions2.add(new double[]{390.0, 25.0});
+        positions2.add(new double[]{395.0, 25.0});
+        positions2.add(new double[]{400.0, 25.0});
+        positions2.add(new double[]{405.0, 25.0});
+        positions2.add(new double[]{410.0, 25.0});
+        positions2.add(new double[]{415.0, 25.0});
+        positions2.add(new double[]{420.0, 25.0});
+        positions2.add(new double[]{420.0, 30.0});
+        positions2.add(new double[]{420.0, 35.0});
+        positions2.add(new double[]{420.0, 40.0});
+        positions2.add(new double[]{420.0, 45.0});
+        positions2.add(new double[]{420.0, 50.0});
+        positions2.add(new double[]{420.0, 55.0});
+        positions2.add(new double[]{420.0, 60.0});
+        positions2.add(new double[]{420.0, 65.0});
+        positions2.add(new double[]{420.0, 70.0});
+        positions2.add(new double[]{420.0, 75.0});
+        positions2.add(new double[]{420.0, 80.0});
+        positions2.add(new double[]{420.0, 85.0});
+        positions2.add(new double[]{420.0, 90.0});
+        positions2.add(new double[]{420.0, 95.0});
+        positions2.add(new double[]{420.0, 100.0});
+        positions2.add(new double[]{420.0, 105.0});
+        positions2.add(new double[]{420.0, 110.0});
+        positions2.add(new double[]{420.0, 115.0});
+        positions2.add(new double[]{420.0, 120.0});
+        positions2.add(new double[]{420.0, 125.0});
+        positions2.add(new double[]{420.0, 130.0});
+        positions2.add(new double[]{420.0, 135.0});
+        positions2.add(new double[]{420.0, 140.0});
+        positions2.add(new double[]{420.0, 145.0});
+        positions2.add(new double[]{420.0, 150.0});
+        positions2.add(new double[]{420.0, 155.0});
+        positions2.add(new double[]{420.0, 160.0});
+        positions2.add(new double[]{420.0, 165.0});
+        positions2.add(new double[]{420.0, 170.0});
+        positions2.add(new double[]{420.0, 175.0});
+        positions2.add(new double[]{420.0, 180.0});
+        positions2.add(new double[]{420.0, 185.0});
+        positions2.add(new double[]{420.0, 190.0});
+        positions2.add(new double[]{420.0, 195.0});
+        positions2.add(new double[]{420.0, 200.0});
+        positions2.add(new double[]{420.0, 205.0});
+        positions2.add(new double[]{420.0, 210.0});
+        positions2.add(new double[]{420.0, 215.0});
+        positions2.add(new double[]{420.0, 220.0});
+        positions2.add(new double[]{420.0, 225.0});
+        positions2.add(new double[]{420.0, 230.0});
+        positions2.add(new double[]{420.0, 235.0});
+        positions2.add(new double[]{420.0, 240.0});
+        positions2.add(new double[]{420.0, 245.0});
+        positions2.add(new double[]{420.0, 250.0});
+        positions2.add(new double[]{420.0, 255.0});
+        positions2.add(new double[]{420.0, 260.0});
+        positions2.add(new double[]{420.0, 265.0});
+        positions2.add(new double[]{420.0, 270.0});
+        positions2.add(new double[]{420.0, 275.0});
+        positions2.add(new double[]{420.0, 280.0});
+        positions2.add(new double[]{420.0, 285.0});
+        positions2.add(new double[]{420.0, 290.0});
+        positions2.add(new double[]{420.0, 295.0});
+        positions2.add(new double[]{420.0, 295.0});
+        positions2.add(new double[]{420.0, 295.0});
+        positions2.add(new double[]{420.0, 295.0});
+        positions2.add(new double[]{420.0, 295.0});
+        positions2.add(new double[]{420.0, 295.0});
 
 
 
@@ -314,8 +550,6 @@ public class Main extends Application {
 
 
 
-
-        // Move the robot to the end position using the A* algorithm
 
         // Just Sets up the scene and the stage
         Timeline timeline = new Timeline();
@@ -329,7 +563,15 @@ public class Main extends Application {
 
         Button startmanualButtonCar = new Button("Car (Manual)");
 
-        Pane maze1Layout = new Pane();  // Replace with your first maze layout
+   Button startButton2 = new Button("Start Maze 2 (Animation");
+
+        Button startmanualButton2 = new Button("Start Maze 2 (Manual)");
+
+        Button startButtonCar2 = new Button("Car 2 (Auto)");
+
+        Button startmanualButtonCar2 = new Button("Car 2 (Manual)");
+
+        Pane maze1Layout = new Pane();
         Pane maze2Layout = new Pane();
 
 
@@ -337,10 +579,10 @@ public class Main extends Application {
 
         startmanualButton.setOnAction(e->{
             Pane mazeLayout = new Pane();
-            mazeLayout.getChildren().addAll(mazeView2, robot.getRobotImageView());
+            mazeLayout.getChildren().addAll(mazeView, robot.getRobotImageView());
 
-            Scene mazeScene = new Scene(mazeLayout, mazeImage2.getWidth(), mazeImage2.getHeight());
-            mazeScene.setOnKeyPressed(event -> robot.handleMovement(event, mazeImage2));
+            Scene mazeScene = new Scene(mazeLayout, mazeImage.getWidth(), mazeImage.getHeight());
+            mazeScene.setOnKeyPressed(event -> robot.handleMovement(event, mazeImage));
             timeline.play(); // Start the timeline when switching to the maze scene
             primaryStage.setScene(mazeScene); // Switch to the maze scene
 
@@ -425,10 +667,104 @@ public class Main extends Application {
             primaryStage.setScene(mazeScene); // Switch to the maze scene
 
         });
+
+        startmanualButton2.setOnAction(e->{
+            Pane mazeLayout = new Pane();
+            mazeLayout.getChildren().addAll(mazeView2, robot.getRobotImageView());
+
+            Scene mazeScene = new Scene(mazeLayout, mazeImage2.getWidth(), mazeImage2.getHeight());
+            mazeScene.setOnKeyPressed(event -> robot.handleMovement(event, mazeImage2));
+            timeline.play(); // Start the timeline when switching to the maze scene
+            primaryStage.setScene(mazeScene); // Switch to the maze scene
+
+        });
+
+        startButton2.setOnAction(e -> {
+            Pane mazeLayout = new Pane();
+            mazeLayout.getChildren().addAll(mazeView2, robot.getRobotImageView());
+
+            Scene mazeScene = new Scene(mazeLayout, mazeImage2.getWidth(), mazeImage2.getHeight());
+
+            int delay = 0;
+
+            for (double[] position : positions2) {
+                KeyFrame keyFrame = new KeyFrame(Duration.millis(delay), event -> {
+                    robot.getRobotImageView().setX(position[0]);
+                    robot.getRobotImageView().setY(position[1]);
+                });
+                timeline.getKeyFrames().add(keyFrame);
+                delay += 500; //Also added a    Delay of 500 milliseconds between moves
+            }
+            mazeScene.setOnKeyPressed(event -> robot.handleMovement(event, mazeImage2));
+            timeline.play(); // Start the timeline when switching to the maze scene
+            primaryStage.setScene(mazeScene); // Switch to the maze scene
+
+
+
+        });
+        startButtonCar2.setOnAction(e -> {
+            Pane mazeLayout = new Pane();
+            mazeLayout.getChildren().addAll(mazeView2, car.getcarImageView());
+
+            Scene mazeScene = new Scene(mazeLayout, mazeImage2.getWidth(), mazeImage2.getHeight());
+
+            int delay = 0;
+
+            for (int i = 0; i < positions2.size(); i++) {
+                final int index = i;
+                KeyFrame keyFrame = new KeyFrame(Duration.millis(delay), event -> {
+                    // Get the current and next position
+                    double[] currentPosition = positions2.get(index);
+                    double[] nextPosition = (index + 1 < positions2.size()) ? positions2.get(index + 1) : currentPosition;
+
+                    // Update the car's position
+                    car.getcarImageView().setX(currentPosition[0]);
+                    car.getcarImageView().setY(currentPosition[1]);
+
+                    // Determine the direction based on movement
+                    if (nextPosition[0] > currentPosition[0]) {
+                        // Moving right
+                        car.getcarImageView().setRotate(0);
+                    } else if (nextPosition[0] < currentPosition[0]) {
+                        // Moving left
+                        car.getcarImageView().setRotate(0);
+
+                    } else if (nextPosition[1] > currentPosition[1]) {
+                        // Moving down
+                        car.getcarImageView().setRotate(90);
+
+                        System.out.println("Down Now");
+
+                    } else if (nextPosition[1] < currentPosition[1]) {
+                        // Moving up
+                        car.getcarImageView().setRotate(270);
+                    }
+                });
+                timeline.getKeyFrames().add(keyFrame);
+                delay += 500;
+            }
+
+            timeline.play();
+            primaryStage.setScene(mazeScene); // Switch to the maze scene
+        });
+
+        startmanualButtonCar2.setOnAction(e -> {
+            Pane mazeLayout = new Pane();
+            mazeLayout.getChildren().addAll(mazeView2, car.getcarImageView());
+
+            Scene mazeScene = new Scene(mazeLayout, mazeImage2.getWidth(), mazeImage2.getHeight());
+            mazeScene.setOnKeyPressed(event -> car.handleMovement(event, mazeImage2));
+            timeline.play(); // This Starts the timeline when switching to the maze scene
+            primaryStage.setScene(mazeScene); // Switch to the maze scene
+
+        });
         GridPane welcomeLayout = new GridPane();
+
         GridPane welcomeLayout2 = new GridPane();
+
         welcomeLayout.setVgap(10);
         welcomeLayout.setHgap(10);
+
         welcomeLayout2.setVgap(10);
         welcomeLayout2.setHgap(10);
 
@@ -436,6 +772,12 @@ public class Main extends Application {
         GridPane.setConstraints(startmanualButton,1,0);
         GridPane.setConstraints(startButtonCar,0,1);
         GridPane.setConstraints(startmanualButtonCar,1,1);
+
+        GridPane.setConstraints(startButton2,0,0);
+        GridPane.setConstraints(startmanualButton2,1,0);
+        GridPane.setConstraints(startButtonCar2,0,1);
+        GridPane.setConstraints(startmanualButtonCar2,1,1);
+
         TabPane tabPane = new TabPane();
 
 //        Tab welcomeTab = new Tab("Welcome");
@@ -451,9 +793,8 @@ public class Main extends Application {
 
         tabPane.getTabs().addAll( maze1Tab, maze2Tab);
 
-        // Set up the scene
-        Scene scene = new Scene(tabPane, 800, 600);  // Adjust size as needed
-
+        // Sets up the scene
+        Scene scene = new Scene(tabPane, 800, 600);
 
 
 
@@ -463,10 +804,10 @@ public class Main extends Application {
         welcomeLayout.getChildren().add(startButtonCar);
         welcomeLayout.getChildren().add(startmanualButtonCar);
  welcomeLayout2.setAlignment(Pos.CENTER);
-        welcomeLayout2.getChildren().add(startButton);
-        welcomeLayout2.getChildren().add(startmanualButton);
-        welcomeLayout2.getChildren().add(startButtonCar);
-        welcomeLayout2.getChildren().add(startmanualButtonCar);
+        welcomeLayout2.getChildren().add(startButton2);
+        welcomeLayout2.getChildren().add(startmanualButton2);
+        welcomeLayout2.getChildren().add(startButtonCar2);
+        welcomeLayout2.getChildren().add(startmanualButtonCar2);
 
 
         Scene welcomeScene = new Scene(welcomeLayout, 300, 200);
@@ -492,7 +833,7 @@ public class Main extends Application {
     }
 
 //    private boolean isWall(Color pixelColor) {
-//        Color wallColor = Color.web("#005399"); // I detected the Blue wall color, to help mapping walls so bot knows to avoid them
+//        Color wallColor = Color.web("#005399"); // This Blue wall color, is just a little thing to help in mapping walls so bot knows to avoid them
 //        return pixelColor.equals(wallColor);
 //    }
 
