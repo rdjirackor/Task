@@ -36,6 +36,7 @@ public class Main extends Application {
 //        }
 //This initializes the droid bot
         Robot robot = new Robot();
+        Car car = new Car();
         ArrayList<double[]> positions = new ArrayList<>();
         //These are all the positions the bot needs to reach before completing that maze thing
         positions.add(new double[]{50.0, 55.0});
@@ -319,13 +320,18 @@ public class Main extends Application {
 
         Button startmanualButton = new Button("Start Maze 1 (Manual)");
 
+        Button startButtonCar = new Button("Car (Auto)");
 
-        Pane mazeLayout = new Pane();
-        mazeLayout.getChildren().addAll(mazeView, robot.getRobotImageView());
+        Button startmanualButtonCar = new Button("Car (Manual)");
 
-        Scene mazeScene = new Scene(mazeLayout, mazeImage.getWidth(), mazeImage.getHeight());
+
+
 
         startmanualButton.setOnAction(e->{
+            Pane mazeLayout = new Pane();
+            mazeLayout.getChildren().addAll(mazeView, robot.getRobotImageView());
+
+            Scene mazeScene = new Scene(mazeLayout, mazeImage.getWidth(), mazeImage.getHeight());
             mazeScene.setOnKeyPressed(event -> robot.handleMovement(event, mazeImage));
             timeline.play(); // Start the timeline when switching to the maze scene
             primaryStage.setScene(mazeScene); // Switch to the maze scene
@@ -333,6 +339,10 @@ public class Main extends Application {
         });
 
         startButton.setOnAction(e -> {
+            Pane mazeLayout = new Pane();
+            mazeLayout.getChildren().addAll(mazeView, robot.getRobotImageView());
+
+            Scene mazeScene = new Scene(mazeLayout, mazeImage.getWidth(), mazeImage.getHeight());
 
             int delay = 0;
 
@@ -351,16 +361,53 @@ public class Main extends Application {
 
 
         });
+        startButtonCar.setOnAction(e -> {
+            Pane mazeLayout = new Pane();
+            mazeLayout.getChildren().addAll(mazeView, car.getcarImageView());
+
+            Scene mazeScene = new Scene(mazeLayout, mazeImage.getWidth(), mazeImage.getHeight());
+
+            int delay = 0;
+
+            for (double[] position : positions) {
+                KeyFrame keyFrame = new KeyFrame(Duration.millis(delay), event -> {
+                    car.getcarImageView().setX(position[0]);
+                    car.getcarImageView().setY(position[1]);
+                });
+                timeline.getKeyFrames().add(keyFrame);
+                delay += 500; //Also added a    Delay of 500 milliseconds between moves
+            }
+            mazeScene.setOnKeyPressed(event -> car.handleMovement(event, mazeImage));
+            timeline.play(); // Start the timeline when switching to the maze scene
+            primaryStage.setScene(mazeScene); // Switch to the maze scene
+
+
+
+        });
+        startmanualButtonCar.setOnAction(e -> {
+            Pane mazeLayout = new Pane();
+            mazeLayout.getChildren().addAll(mazeView, car.getcarImageView());
+
+            Scene mazeScene = new Scene(mazeLayout, mazeImage.getWidth(), mazeImage.getHeight());
+            mazeScene.setOnKeyPressed(event -> car.handleMovement(event, mazeImage));
+            timeline.play(); // Start the timeline when switching to the maze scene
+            primaryStage.setScene(mazeScene); // Switch to the maze scene
+
+        });
         GridPane welcomeLayout = new GridPane();
         welcomeLayout.setVgap(10);
         welcomeLayout.setHgap(10);
 
         GridPane.setConstraints(startButton,0,0);
         GridPane.setConstraints(startmanualButton,1,0);
+        GridPane.setConstraints(startButtonCar,0,1);
+        GridPane.setConstraints(startmanualButtonCar,1,1);
 
 welcomeLayout.setAlignment(Pos.CENTER);
         welcomeLayout.getChildren().add(startButton);
         welcomeLayout.getChildren().add(startmanualButton);
+        welcomeLayout.getChildren().add(startButtonCar);
+        welcomeLayout.getChildren().add(startmanualButtonCar);
 
 
         Scene welcomeScene = new Scene(welcomeLayout, 300, 200);

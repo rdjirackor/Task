@@ -38,21 +38,25 @@ public class Car {
             case UP:
                 if (canMove(xPosition, yPosition - stepSize, mazeImage)) {
                     yPosition -= stepSize;
+                    carView.setRotate(270);
                 }
                 break;
             case DOWN:
                 if (canMove(xPosition, yPosition + stepSize, mazeImage)) {
                     yPosition += stepSize;
+                    carView.setRotate(90);
                 }
                 break;
             case LEFT:
                 if (canMove(xPosition - stepSize, yPosition, mazeImage)) {
                     xPosition -= stepSize;
+                    carView.setRotate(0);
                 }
                 break;
             case RIGHT:
                 if (canMove(xPosition + stepSize, yPosition, mazeImage)) {
                     xPosition += stepSize;
+                    carView.setRotate(0);
                 }
                 break;
         }
